@@ -1,0 +1,343 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #000;
+    color: #fff;
+    background: url(https://wallpaperaccess.com/full/833167.jpg) no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+html{
+    scroll-behavior: smooth;
+}
+#logo{
+    filter: invert(100%);
+}
+#header-img{
+    max-width: 80%;
+    margin: -10px -20px;
+}
+
+#nav-bar{
+    position: sticky;
+    display: flex;
+    align-items: center;
+    top: 0px;
+}
+#nav-bar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    max-width: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+#nav-bar ul{
+    display: flex;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#nav-bar ul li{
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#nav-bar ul li a{
+    color: #fff;
+    display: block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+#nav-bar ul li a:hover{
+    color: #fff;
+    background: linear-gradient(45deg,#f47dee, #3b7e7d);
+} 
+#form p{
+    text-transform: uppercase;
+    font-size: 28px;
+}
+#form{
+    background: rgba(0, 0, 0, 0.301);
+    text-align: center;
+    line-height: 50px;
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 70px 20px;
+
+}
+label{
+    display: block;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    font-size: 30px;
+}
+#email{
+    border-radius: 2px;
+    border: none;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 7px 1px 10px;
+    display: block;
+    margin: 0px 2px 15px;
+    font-size: 20px;
+    width: 95%;
+}
+#submit{
+    background: linear-gradient(45deg,#f47dee, #3b7e7d);
+    color: #000;
+    border: none;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 7px 1px 10px;
+    font-size: 25px;
+    cursor: pointer;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    width: 50%;
+}
+
+h1{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+i{
+    margin: 0px 0px 40px 120px;
+    font-size: 80px;
+}
+i:hover{
+    color: #000;
+}
+
+#feature{  
+    margin: 6px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+}
+
+#feature .grid{
+    border: 2px solid rgb(46, 43, 43);
+    padding: 37px;
+    margin: 7px 20px;
+    border-radius: 28px;
+    background: linear-gradient(55deg, #3b7e7d, #f47dee);
+}
+
+#feature .grid h2{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    background: rgba(120, 17, 141, 0.329);
+    padding: 7px 20px;
+    max-width: 70%;
+    margin: 0px auto 20px;
+}
+
+#feature .grid p{
+    font-family: 'Bree Serif', serif;
+    text-align: center;
+}
+
+#video{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+
+}
+.video h2{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 40px auto;
+    font-size: x-large;
+    background: rgba(120, 17, 141, 0.329);
+    padding: 10px 150px 10px 160px;
+    max-width: 65%
+}
+
+iframe{
+    height: 200px;
+    width: 500px;
+}
+
+#slides-container{
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+}
+#slides-container img{
+    margin-left: 500px;
+    margin-bottom: 40px;
+}
+
+#slides-container h2{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 40px auto;
+    background: rgba(120, 17, 141, 0.329);
+    padding: 10px 150px 10px 160px;
+    max-width: 65%
+}
+
+.myslides{
+    display: none;
+}
+
+.prev, .next{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6 ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  .number{
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    /* position: absolute; */
+    top: 0;
+  }
+
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+
+  .myslides {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+ 
+
+footer{
+    margin-top: 30px;
+    background: #000;
+    padding: 20px;
+}
+
+footer ul{
+    display: flex;
+    justify-content: flex-end;
+    text-decoration: none;
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+footer ul li {
+    padding: 0 10px;
+    text-decoration: none;
+}
+
+footer ul li a{
+    text-decoration: none;
+}
+
+footer span{
+    margin-top: 5px;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 0.9em;
+    color: #444;
+}
+
+@media screen and (max-width:1124px) {
+    #header-img{
+        max-width: 80%;
+        margin: -60px 0px 0px 35px;
+    }
+    #nav-bar{
+        flex-direction: column;
+    }
+    
+    #nav-bar ul li a{
+        font-size: 1.3rem;
+        padding: 0px 7px;
+        padding-bottom: 8px;
+    }
+    p{
+        font-size: 15px;
+    }
+    i{
+        margin: 0px 0px 40px 190px;
+        font-size: 70px;    
+    }
+    .video h2{
+        font-size: 20px;
+        text-align: center;
+        margin: 40px auto;
+        padding: 10px 10px;
+        max-width: 100%;
+    }
+    #video{
+        margin: auto;
+    }
+    #slides-container{
+        max-width: 100%;
+        position: relative;
+        margin: 50px auto;
+    }
+    #slides-container img{
+        margin-left: 200px;
+    }
+    #slides-container h2{
+        text-align: center;
+        text-transform: uppercase;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        background: rgba(120, 17, 141, 0.329);
+        padding: 10px 10px;
+        max-width: 100%;
+    }
+
+}
